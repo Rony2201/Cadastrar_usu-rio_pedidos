@@ -1,0 +1,107 @@
+/* App.css */
+
+/* Estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Container principal */
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Estilo para a criação de usuário */
+div {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para listas de usuários */
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+li {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li button {
+  background-color: #28a745;
+  margin-left: 10px;
+}
+
+li button:hover {
+  background-color: #218838;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* Estilo para pedidos */
+input[type="number"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #28a745;
+}
+
+button:hover {
+  background-color: #218838;
+}
