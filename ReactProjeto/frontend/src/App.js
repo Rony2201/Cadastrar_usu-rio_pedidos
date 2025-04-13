@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './App.css'; // Importa o arquivo CSS
+import './App.css'; 
 
-const api = "http://localhost:3000"; // A URL da sua API (ajuste conforme necessário)
+const api = "http://localhost:3000"; 
 
 function App() {
   const [usuarios, setUsuarios] = useState([]);
@@ -13,17 +13,17 @@ function App() {
   const [descricao, setDescricao] = useState("");
   const [valor, setValor] = useState("");
 
-  // Função para listar os usuários
+
   useEffect(() => {
     const fetchUsuarios = async () => {
       const response = await axios.get(`${api}/usuario`);
       setUsuarios(response.data);
     };
-    fetchUsuarios(); // Agora a função está dentro do useEffect, chamada corretamente.
+    fetchUsuarios(); 
   }, []);
 
-  // Função para criar um novo usuário
-// Função para criar um novo usuário
+
+
 const createUser = async () => {
   if (nome && email && senha) {
     await axios.post(`${api}/usuario`, { nome, email, senha });
@@ -31,21 +31,20 @@ const createUser = async () => {
     setEmail("");
     setSenha("");
     alert("Usuário criado com sucesso!");
-    // Remova a linha abaixo, pois o `useEffect` já cuida da atualização dos usuários
-    // fetchUsuarios();
+
   } else {
     alert("Todos os campos são obrigatórios!");
   }
 };
 
 
-  // Função para listar os pedidos de um usuário
+
   const fetchPedidos = async (usuarioId) => {
     const response = await axios.get(`${api}/usuario/${usuarioId}/pedidos`);
     setPedidos(response.data);
   };
 
-  // Função para criar um novo pedido
+
   const createPedido = async (usuarioId) => {
     if (descricao && valor) {
       await axios.post(`${api}/usuario/${usuarioId}/pedido`, { descricao, valor });
@@ -58,7 +57,7 @@ const createUser = async () => {
     }
   };
 
-  // Função para excluir um pedido
+
   const deletePedido = async (usuarioId, pedidoId) => {
     await axios.delete(`${api}/usuario/${usuarioId}/pedido/${pedidoId}`);
     fetchPedidos(usuarioId);
